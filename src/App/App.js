@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { ContainerHeader } from "../components/container-header";
+import { DivRedesSocias } from "../components/container-redes-socias";
+import { Footer } from "../components/footer";
 import { Header } from "../components/header/header";
 import { ContainerNavagation } from "../components/navigation";
 import { SectionPromocoes } from "../components/promocoes";
@@ -35,6 +37,8 @@ function App() {
           <SectionSlide title="Destaques" idSlide="slide1"/>
           <SectionSlide title="Lançamentos" idSlide="slide2"/>
           <SectionPromocoes />
+          <DivRedesSocias />
+          <Footer />
         </ContainerRoot>
       </BrowserRouter>
     </GlobalContext.Provider>

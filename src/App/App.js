@@ -1,15 +1,14 @@
 import { useState } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ContainerHeader } from "../components/container-header";
-import { DivRedesSocias } from "../components/container-redes-socias";
 import { Footer } from "../components/footer";
 import { Header } from "../components/header/header";
 import { ContainerNavagation } from "../components/navigation";
-import { SectionPromocoes } from "../components/promocoes";
-import { SectionSlide } from "../components/section-destaque-lancamentos";
-import { SectionLogo } from "../components/section-logo";
 import { ContainerRoot } from "../components/style-initial";
 import { GlobalContext } from "../context";
+import { PaginaContato } from "../pages/contato";
+import { Home } from "../pages/home";
+import { RotaProdutos } from "../pages/produtos";
 
 
 function App() {
@@ -28,18 +27,18 @@ function App() {
   return (
     <GlobalContext.Provider value={[mobileAtivador, permiMobile]}>
       <BrowserRouter>
-        <ContainerRoot>
-          <Header>
-            <ContainerHeader />
-            <ContainerNavagation />
-          </Header>
-          <SectionLogo />
-          <SectionSlide title="Destaques" idSlide="slide1"/>
-          <SectionSlide title="Lançamentos" idSlide="slide2"/>
-          <SectionPromocoes />
-          <DivRedesSocias />
-          <Footer />
-        </ContainerRoot>
+          <ContainerRoot>
+            <Header>
+              <ContainerHeader />
+              <ContainerNavagation />
+            </Header>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/produtos" element={<RotaProdutos />} />
+              <Route path="/contato" element={<PaginaContato />} />
+            </Routes>
+            <Footer />
+          </ContainerRoot>
       </BrowserRouter>
     </GlobalContext.Provider>
    

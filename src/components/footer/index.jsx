@@ -12,13 +12,13 @@ export const Footer = () => {
                     <h2>Departamento</h2>
                     <nav className="box-links-navigation">
                         <ul>
-                            <li><Link className="links-navigation" to="">Início</Link></li>
+                            <li><Link className="links-navigation" to="/">Início</Link></li>
                         </ul>
                         <ul>
-                            <li><Link className="links-navigation"  to="">Produtos</Link></li>
+                            <li><Link className="links-navigation"  to="/produtos">Produtos</Link></li>
                         </ul>
                         <ul>
-                            <li> <Link className="links-navigation"  to="">Contato</Link></li>
+                            <li> <Link className="links-navigation"  to="/contato">Contato</Link></li>
                         </ul>
                         <ul>
                             <li><Link className="links-navigation"  to="">Trocas e devoluções</Link></li>

@@ -18,6 +18,7 @@ export const NavigationNav = styled.nav`
             display: block;
             width: 100%;
             
+            
         `
         }
         padding: 30px 0;
@@ -35,6 +36,10 @@ export const NavigationNav = styled.nav`
             background-color: #f8beb2;
             height: 100vh;
             padding: 60px 30px !important;
+
+            > ul {
+                padding-top: 20px;
+            }
             
         }
         

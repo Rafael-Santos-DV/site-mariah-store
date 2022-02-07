@@ -4,7 +4,7 @@ import { DivRedes } from "./style";
 export const DivRedesSocias = () => {
     return(
         <DivRedes>
-            <a href="http://" target="_blank" className="box-redes-sociais" rel="noreferrer">
+            <a href="https://www.instagram.com/camilly_santos077/" target="_blank" className="box-redes-sociais" rel="noreferrer">
                 <div>
                     <BsInstagram />
                     <span>mariahstore</span>

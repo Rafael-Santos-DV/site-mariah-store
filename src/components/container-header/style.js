@@ -82,6 +82,7 @@ export const DivisionContainer = styled.div`
                 border: none;
                 padding: 10px;
                 background-color: transparent;
+                border-radius: 10px;
 
                 @media only screen and (max-width: 768px) {
                     width: 100%;
@@ -96,7 +97,7 @@ export const DivisionContainer = styled.div`
                 align-items: center;
                 justify-content: center;
                 
-                > .search-icon {
+                > a > .search-icon {
                     font-size: 25px;
                     color: #FEC04D; 
                     cursor: pointer;
@@ -107,6 +108,44 @@ export const DivisionContainer = styled.div`
         > div.container-menu {
             display: flex;
             gap: 35px;
+
+            & .atendimento{
+                position: relative;
+                
+                &:hover {
+                    cursor: pointer;
+
+                    > div.metodos-contato {
+                        opacity: 1;
+                    }
+                }    
+            }
+            
+
+            & div.metodos-contato {
+                flex-direction: column;
+                background-color: #f8beb2;
+                box-shadow: 1px 1px 5px #ffffff,
+                -1px -1px 5px #ffffff;
+                padding: 10px;
+                position: absolute;
+                bottom: -62px;
+                opacity: 0;
+                transition: opacity 1s;
+                
+
+                > div {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    padding: 2px;
+                   
+
+                    > a {
+                        color: #ffffff;
+                    }
+                }
+            }
 
             @media only screen and (max-width: 768px) {
                 
@@ -124,7 +163,20 @@ export const DivisionContainer = styled.div`
                 color: #ffffff;
                 text-transform: capitalize;
                 font-style: italic;
-            
+                position: relative;
+                
+
+                /* ${props => (
+                    props.sideCarrinho ?
+                    css`
+                        overflow: auto !important;
+                    `
+                    :
+                    css`
+                        overflow: hidden;
+                    `
+                )} */
+
                 @media only screen and (max-width: 768px)  {
                     &.carrinho {
                         position: absolute;
@@ -136,15 +188,17 @@ export const DivisionContainer = styled.div`
 
                 > span.search-absulute {
                     position: relative;
-
+                    cursor: pointer;
+                    
                     > .itens-carrinho {
                         position: absolute;
-                        width: 15px;
+                        width: 100%;
+                        max-width: 30px;
                         height: 15px;
                         border-radius: 50%;
                         text-align: center;
                         left: 14px;
-                        color: #b53471;
+                        color: #ffffff;
                         background-color: #000000;
                         font-size: 100%;
                         

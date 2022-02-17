@@ -1,24 +1,28 @@
 import styled from "styled-components";
 
-export const ContainerProdutos = styled.section`
-    margin: 0 auto;
+export const SectionPesquisa = styled.section`
     max-width: 1200px;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    padding: 80px 20px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
 
-    @media only screen and (max-width: 768px)  {
-        grid-template-columns: 1fr;
-        padding: 20px 60px;
+    > h1 {
+        font-size: 40px;
+        color: #f8beb2;
     }
-    @media only screen and (max-width: 568px) {
+
+    > p {
+        font-size: 20px;
         padding: 20px;
+        color: #000000;
     }
 
-    > div.grid-produtos {
+    > div.gallery-pesquisa {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
+        padding: 40px;
+        grid-gap: 40px 20px;
+        
 
         @media only screen and (max-width: 990px) {
             grid-template-columns: repeat(3, 1fr);
@@ -30,46 +34,47 @@ export const ContainerProdutos = styled.section`
 
         > div.box-produto {
             > a.link-container {
+                color: #000000;
                 display: flex;
                 flex-direction: column;
-                text-align: center;
-                border-radius: 30px;
-                gap: 10px;
-                color: #000000;
                 justify-content: center;
                 align-items: center;
-                box-shadow: 1px 1px 1px rgba(0, 0, 0, .1),
-                -1px -1px 1px rgba(0, 0, 0, .1);
-                background-color: #ffffff;
+                gap: 20px;
+                padding-bottom: 30px;
+                border-radius: 30px;
+                box-shadow: 1px 1px 5px rgba(0, 0, 0, .1),
+                -1px -1px 5px rgba(0, 0, 0, .1);
 
                 > img {
-                    border-radius: 30px 30px 0 0;
                     width: 100%;
+                    border-radius: 30px 30px 0 0;
                     border-bottom: 4px solid #000000;
                 }
 
+                > strong {
+                    font-size: 20px;
+                    text-transform: capitalize;
+                }
+
                 > strong.preco-produto {
-                    color: #f8beb2;
                     font-size: 22px;
-                    font-weight: 700;
+                    color: #f8beb2;
+                    font-weight: bold;
                 }
 
                 > span.button-comprar {
-                    width: 80%;
                     border: 1px solid rgba(0, 0, 0, .1);
-                    padding: 10px;
-                    border-radius: 40px;
+                    padding: 10px 40px;
+                    border-radius: 30px;
+                    text-transform: capitalize;
                     transition: background 1s;
 
                     &:hover {
-                        background-color: #f8beb2;
                         color: #ffffff;
+                        background-color: #f8beb2;
                     }
                 }
 
-                > strong {
-                    text-transform: capitalize;
-                }
             }
         }
     }

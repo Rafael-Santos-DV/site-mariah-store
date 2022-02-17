@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const FooterStyle = styled.footer`
     width: 100%;
     background-color: #f8beb2;
+   
 
     > div.box-elementos-footer {
         width: 100%;
@@ -13,6 +14,7 @@ export const FooterStyle = styled.footer`
         justify-content: space-evenly;
         line-height: 2;
         color: #ffffff;
+        padding: 50px 0;
 
 
         @media only screen and (max-width: 768px) {

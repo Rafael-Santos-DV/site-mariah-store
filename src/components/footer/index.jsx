@@ -20,9 +20,9 @@ export const Footer = () => {
                         <ul>
                             <li> <Link className="links-navigation"  to="/contato">Contato</Link></li>
                         </ul>
-                        <ul>
+                        {/* <ul>
                             <li><Link className="links-navigation"  to="">Trocas e devoluções</Link></li>
-                        </ul>               
+                        </ul>                */}
                     </nav>
                 </div>
                 <div className="container-contato">

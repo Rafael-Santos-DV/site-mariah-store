@@ -37,13 +37,18 @@ export const SectionsSlides = styled.section`
             padding: 20px;
             overflow: scroll;
             scroll-behavior: smooth;
+            scrollbar-width: none;
 
             &::-webkit-scrollbar{
+                display: none;
+                
+            }
+            &::-moz-scrollbars-none{
                 display: none;
             }
 
 
-            > a.box-roupas-slide {
+            > div > a.link-container {
                 display: flex;
                 flex-direction: column;
                 text-align: center;
@@ -55,6 +60,7 @@ export const SectionsSlides = styled.section`
                 text-transform: capitalize;
                 font-weight: 900;
                 letter-spacing: 1px;
+               
 
                 > strong:not([class="preco-produto"]){
                     font-style: italic;
@@ -70,6 +76,7 @@ export const SectionsSlides = styled.section`
                     border-radius: 30px 30px 0 0;
                     width: 100%;
                     min-width: 240px;
+                    border-bottom: 4px solid #000000;
 
                     @media only screen and (max-width: 990px) {
                         min-width: 160px;

@@ -9,9 +9,12 @@ export const StyleGlobal = createGlobalStyle`
         text-decoration: none;
         list-style: none;
         font-family: 'Ubuntu Mono', monospace;
+       
     }
-    html, body {
+    html, body, #root{
         position: relative;
+        overflow: hidden auto;
+        height: 100%;
     }
 
 `;

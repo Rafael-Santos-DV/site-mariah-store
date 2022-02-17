@@ -126,7 +126,7 @@ export const RotaProdutos = () => {
 
     useEffect(() => {
         setprodutoApi(() => {
-            return API_TESTE.filter(v => v.corproduto[1].includes(filtroColor))
+            return API_TESTE && API_TESTE.filter(v => v.corproduto[1].includes(filtroColor));
         });
 
     }, [API_TESTE, filtroColor])

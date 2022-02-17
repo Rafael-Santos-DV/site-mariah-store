@@ -4,7 +4,7 @@ import { BsTrashFill } from "react-icons/bs";
 import { useEffect } from "react/cjs/react.development";
 import imagemTeste from "../../assets/imagens-teste/imagem-teste.png";
 import { GlobalContext } from "../../context";
-import { useNavigate } from "react-router-dom";
+
 
 export const BoxCarrinho = () => {
     const [pedido, setPedido] = useState();

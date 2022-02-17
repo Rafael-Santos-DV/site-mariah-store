@@ -66,7 +66,7 @@ export const CompraProduto = () => {
 
             }));
 
-    }, []);
+    }, [simuladorAPI.nomeproduto, simuladorAPI.idproduto, simuladorAPI.precoproduto]);
 
 
     const handleChangeImage = (image) => {
@@ -108,7 +108,7 @@ export const CompraProduto = () => {
             SetAddPedido(v => {
                 
                 typeof v === "object" && v !== null && v.map(h => newPedido.push(h));
-                console.log("esse é o novo: ", newPedido);
+                
 
                 typeof v === "object" && v !== null && v.map((v,i) => {
                     if (v?.idproduto === infoPedido?.idproduto) {
@@ -136,7 +136,7 @@ export const CompraProduto = () => {
         }
         
 
-    }, [infoPedido])
+    }, [infoPedido, SetAddPedido])
 
 
     return(

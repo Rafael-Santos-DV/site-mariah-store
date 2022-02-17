@@ -13,7 +13,6 @@ import { useEffect } from "react/cjs/react.development";
 
 export const ContainerHeader = () => {
     const [mobileAtivador, valorAtivador, useFiltro, setFiltro,, addPedido] = useContext(GlobalContext);
-    console.log("apenas teste", addPedido)
     const [valueFiltro, setValueFiltro] = useState("");
     const [sideCarrinho, SetSideCarrinho] = useState(false);
     const [itensCar, SetItensCar] = useState();
@@ -30,7 +29,7 @@ export const ContainerHeader = () => {
     const handleSideBarCarrinho = () => {
         SetSideCarrinho(v => !v);
     }
-    console.log(sideCarrinho);
+    
     document.addEventListener("keypress", (e) => {
         const pesquisa = document.getElementById("enter-link");
         if (e.key === "Enter") {

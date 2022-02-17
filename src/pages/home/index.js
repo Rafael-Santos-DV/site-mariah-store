@@ -10,7 +10,7 @@ export const Home = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
       }, [])
-      useEffect(() => console.log("render"), []);
+
     return(
         <React.Fragment>
             <SectionLogo />

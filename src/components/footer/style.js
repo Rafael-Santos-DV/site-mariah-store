@@ -57,4 +57,29 @@ export const FooterStyle = styled.footer`
         text-align: center;
     }
 
+    > div.box-politica-cookies {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+        background-color: #000000;
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+        color: #f8beb2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        > span {
+            display: inline-block;
+            border: 1px solid #f8beb2;
+            padding: 10px;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin: 10px auto 0 auto;
+            border-radius: 10px;
+        }
+    }
+
 `;

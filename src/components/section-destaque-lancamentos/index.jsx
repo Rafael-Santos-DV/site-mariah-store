@@ -16,7 +16,7 @@ export const SectionSlide = ({ title, idSlide }) => {
         .scrollLeft -= 240;
         
     }
-    console.log(localStorage.getItem("ola"));
+    
     return(
         <SectionsSlides >
             <h1>{title}</h1>

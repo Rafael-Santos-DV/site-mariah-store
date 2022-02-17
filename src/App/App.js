@@ -33,7 +33,7 @@ function App() {
   useEffect(() => {
     const newPedido = [];
 
-    typeof addPedido === "object" && addPedido !== null && addPedido.map((v, i) => {
+    typeof addPedido === "object" && addPedido !== null && addPedido.forEach((v, i) => {
       
       if (addPedido[i] === null ||
           addPedido[i] === undefined ||
@@ -41,8 +41,6 @@ function App() {
           addPedido[i] === "empty" ||
           addPedido[i] === "null"
         ) {
-
-        console.log("mais  um igual a null");
 
       } else {
         newPedido.push(addPedido[i]);
@@ -54,7 +52,7 @@ function App() {
    
     addPedido !== "undefined" && newPedido[0] !== "null" && 
     localStorage.setItem("pedido", JSON.stringify(newPedido));
-    console.log("esse é o length", newPedido);
+    
    
 
   }, [addPedido]);

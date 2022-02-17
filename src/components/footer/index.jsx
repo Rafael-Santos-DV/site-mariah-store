@@ -3,8 +3,22 @@ import { FooterStyle } from "./style"
 import { AiOutlineWhatsApp, AiOutlineMail } from "react-icons/ai"
 import { FaMapMarkerAlt } from "react-icons/fa"
 import { BsInstagram } from "react-icons/bs";
+import { useEffect } from "react";
 
 export const Footer = () => {
+    useEffect(() => {
+        if (localStorage.getItem("mariahstore")) {
+            document.querySelector(".box-politica-cookies").style.display = "none";
+        }
+    }, []);
+
+    const handleClick = () => {
+        if (!localStorage.getItem("mariahstore")) {
+            localStorage.setItem("mariahstore", "true");
+            document.querySelector(".box-politica-cookies").style.display = "none";
+        }
+    }
+
     return(
         <FooterStyle>
             <div className="box-elementos-footer">
@@ -20,9 +34,6 @@ export const Footer = () => {
                         <ul>
                             <li> <Link className="links-navigation"  to="/contato">Contato</Link></li>
                         </ul>
-                        {/* <ul>
-                            <li><Link className="links-navigation"  to="">Trocas e devoluções</Link></li>
-                        </ul>                */}
                     </nav>
                 </div>
                 <div className="container-contato">
@@ -47,6 +58,10 @@ export const Footer = () => {
             </div>
             <div className="box-footer">
                 <span>Copyright Mariah Store - {new Date().getFullYear()}. Todos os direitos reservados.</span>
+            </div>
+            <div className="box-politica-cookies" >
+                <p>Ao navegar por este site você aceita o uso de cookies para agilizar a sua experiência de compra.</p>
+                <span onClick={handleClick}>Entendi</span>
             </div>
         </FooterStyle>
     )

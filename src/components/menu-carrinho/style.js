@@ -13,8 +13,6 @@ export const AsideCarrinho = styled.aside`
     justify-content: end;
     opacity: 0;
 
-    ${props => console.log(props)}
-
     ${props => 
         
         props.stateDisplay ? 

@@ -18,11 +18,15 @@ export const CompraProduto = () => {
     const [erro, setErro] = useState(null);
     const [disabledSelect, SetdisabledSelect] = useState(false);
     const [,,,, SetAddPedido] = useContext(GlobalContext);
-
+    useEffect(() => document.body.scrollTop = 0, []);
+    
+    useEffect(() => {
+        document.getElementById("root").scrollTo(0, 0);
+    }, [])
 
     const simuladorAPI = 
         {
-            idproduto: 3,
+            idproduto: id,
             nomeproduto: "camisa",
             precoproduto: 10
         }
@@ -34,8 +38,6 @@ export const CompraProduto = () => {
         SetInfoPedido(v => ({ ...v, [element.name]: element.value }));
 
     }
-
-    useEffect(() => window.scrollTo(0, 0), [id]);
 
     useEffect(() => {
 
@@ -140,7 +142,7 @@ export const CompraProduto = () => {
 
 
     return(
-            <SectionCarrinho>
+            <SectionCarrinho className="teste">
                 <div className="container-fotos-produto">
                     <div className="box-fotos">
 

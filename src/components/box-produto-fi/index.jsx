@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 
 export const BoxProduto = (props) => {
+    
     return(
         <div className="box-produto">
             <Link className="link-container" to={`/produtos/${props.idproduto}`}>

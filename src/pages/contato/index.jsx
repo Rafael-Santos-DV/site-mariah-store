@@ -6,8 +6,8 @@ import { useEffect } from "react";
 export const PaginaContato = () => {
 
     useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+        document.getElementById("root").scrollTo(0, 0);
+    }, [])
     
     return(
         <SectionContato>

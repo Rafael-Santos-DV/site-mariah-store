@@ -8,8 +8,8 @@ import { SectionLogo } from "../../components/section-logo";
 export const Home = () => {
 
     useEffect(() => {
-        window.scrollTo(0, 0);
-      }, [])
+        document.getElementById("root").scrollTo(0, 0);
+    }, [])
 
     return(
         <React.Fragment>

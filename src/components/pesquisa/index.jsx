@@ -11,6 +11,10 @@ export const PesquisaProdutos = ({ search }) => {
     const [testeApi, setApi] = useState();
 
     useEffect(() => {
+        document.getElementById("root").scrollTo(0, 0);
+    }, [])
+
+    useEffect(() => {
         const api = [
 
             {
@@ -53,16 +57,11 @@ export const PesquisaProdutos = ({ search }) => {
         setApi(api);
 
     }, []);
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [])
-
     
    
     useEffect(() => {
         setUseSearch(() => {
-            return testeApi.filter(v => v.nomeproduto.toLocaleLowerCase().includes(search.toLocaleLowerCase() || String(pesquisa).toLocaleLowerCase()))
+            return testeApi && testeApi.filter(v => v.nomeproduto.toLocaleLowerCase().includes(search.toLocaleLowerCase() || String(pesquisa).toLocaleLowerCase()))
         });
 
     }, [search, pesquisa, testeApi]);
@@ -71,7 +70,7 @@ export const PesquisaProdutos = ({ search }) => {
     return(
         <SectionPesquisa>
             <h1>Resultado da Pesquisa</h1>
-            {useSearch.length === 0 && <p>Não há resultados para a sua pesquisa</p>}
+            {(useSearch && useSearch.length) === 0 && <p>Não há resultados para a sua pesquisa</p>}
             <div className="gallery-pesquisa">
                 {useSearch && useSearch.map((valor, i) => (
                     <BoxProduto 

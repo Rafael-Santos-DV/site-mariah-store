@@ -11,8 +11,8 @@ export const RotaProdutos = () => {
     const [API_TESTE, SetapiTeste] = useState();
 
     useEffect(() => {
-        window.scrollTo(0, 0);
-      }, [])
+        document.getElementById("root").scrollTo(0, 0);
+    }, [])
 
     useEffect(() => {
         const API = [

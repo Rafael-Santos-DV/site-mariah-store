@@ -1,5 +1,4 @@
-import React, { useState }  from "react";
-import { useEffect } from "react/cjs/react.development";
+import React, { useState,  useEffect}  from "react";
 import { AsideFiltro } from "./style";
 
 const CoresDinamica = (props) => {
@@ -31,15 +30,16 @@ export const FiltroCores = ({ api_dices, state_color }) => {
         const  NameColor = [];
 
 
-        api_dices && api_dices.map(v => {
+        api_dices && api_dices.forEach(v => {
             allColor.push(v.corproduto[1]);
             allNames.push(v.corproduto[0]);
+            
         });
 
         singleColor.push(...new Set(allColor));
         singleName.push(...new Set(allNames));
 
-        singleName.map((value, index) => NameColor.push([value, singleColor[index]]));
+        singleName.forEach((value, index) => NameColor.push([value, singleColor[index]]));
 
         SetuniqueColor(NameColor);
 

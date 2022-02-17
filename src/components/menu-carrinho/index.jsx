@@ -7,13 +7,15 @@ import { GlobalContext } from "../../context";
 
 export const SideBarCarrinho = ( { onClickSide, stateDisplay } ) => {
     const [display, setDisplay] = useState();
-    const [itemsCarrinho, SetItemsCarrinho] = useState();
+    const [, SetItemsCarrinho] = useState();
     const [,,,,, addPedido] = useContext(GlobalContext);
     const [totalCarrinho, SettotalCarrinho] = useState();
+    
 
     useEffect(() => {
         SettotalCarrinho(() => {
-           
+            
+
             let total = 0.00;
             typeof addPedido === "object" && addPedido !== null && addPedido.forEach((v) => {
                 
@@ -30,7 +32,8 @@ export const SideBarCarrinho = ( { onClickSide, stateDisplay } ) => {
         setDisplay(stateDisplay);
     }, [stateDisplay]);
 
-    
+    const localStoragePedido = localStorage.getItem["pedido"];
+
     useEffect(() => {
         SetItemsCarrinho(() => {
             const pedidoJson = JSON.parse(localStorage.getItem("pedido") !== "undefined" && localStorage.getItem("pedido") !== null && localStorage.getItem("pedido"));
@@ -38,7 +41,7 @@ export const SideBarCarrinho = ( { onClickSide, stateDisplay } ) => {
             return [{ ...pedidoJson }];
         })
 
-    }, [localStorage.getItem["pedido"]]);
+    }, [localStoragePedido]);
     
   
 

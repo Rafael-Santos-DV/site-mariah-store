@@ -8,123 +8,128 @@ import { useEffect, useState } from "react";
 export const RotaProdutos = () => {
     const [produtoApi, setprodutoApi] = useState();
     const [filtroColor, setFiltroColor] = useState("");
-
+    const [API_TESTE, SetapiTeste] = useState();
 
     useEffect(() => {
         window.scrollTo(0, 0);
       }, [])
 
+    useEffect(() => {
+        const API = [
+            {
+                corproduto: ["vermelha", "#ff0303"],
+                nomeproduto: "Camiseta Tall",
+                urlproduto: [imagemteste, imagemteste],
+                tituloproduto: "roupa gola",
+                idproduto: "444",
+                precoproduto: "33,00",
+                 
+            },
+            {
+                corproduto: ["vermelha", "#ff0303"],
+                nomeproduto: "Camiseta Tall",
+                urlproduto: [imagemteste, imagemteste],
+                tituloproduto: "roupa gola",
+                idproduto: "444",
+                precoproduto: "33,00",
+                 
+            },
+            {
+                corproduto: ["vermelha", "#ff0303"],
+                nomeproduto: "Camiseta Tall",
+                urlproduto: [imagemteste, imagemteste],
+                tituloproduto: "roupa gola",
+                idproduto: "444",
+                precoproduto: "33,00",
+                 
+            },
+            {
+                corproduto: ["vermelha", "#ff0303"],
+                nomeproduto: "Camiseta Tall",
+                urlproduto: [imagemteste, imagemteste],
+                tituloproduto: "roupa gola",
+                idproduto: "444",
+                precoproduto: "33,00",
+                 
+            },
+            {
+                corproduto: ["vermelha", "#ff0303"],
+                nomeproduto: "Camiseta Tall",
+                urlproduto: [imagemteste, imagemteste],
+                tituloproduto: "roupa gola",
+                idproduto: "444",
+                precoproduto: "33,00",
+                 
+            },
+            {
+                corproduto: ["azul", "#8400ff"],
+                nomeproduto: "Camiseta Tall",
+                urlproduto: [imagemteste, imagemteste],
+                tituloproduto: "roupa gola",
+                idproduto: "444",
+                precoproduto: "33,00",
+                 
+            },
+            {
+                corproduto: ["vermelha", "#ff0303"],
+                nomeproduto: "Camiseta Tall",
+                urlproduto: [imagemteste, imagemteste],
+                tituloproduto: "roupa gola",
+                idproduto: "444",
+                precoproduto: "33,00",
+                 
+            },
+            {
+                corproduto: ["vermelha", "#ff0303"],
+                nomeproduto: "Camiseta Tall",
+                urlproduto: [imagemteste, imagemteste],
+                tituloproduto: "roupa gola",
+                idproduto: "444",
+                precoproduto: "33,00",
+                 
+            }
+            ,
+            {
+                corproduto: ["vermelha", "#ff0303"],
+                nomeproduto: "Camiseta Tall",
+                urlproduto: [imagemteste, imagemteste],
+                tituloproduto: "roupa gola",
+                idproduto: "444",
+                precoproduto: "33,00",
+                 
+            },
+            {
+                corproduto: ["vermelha", "#ff0303"],
+                nomeproduto: "Camiseta Tall",
+                urlproduto: [imagemteste, imagemteste],
+                tituloproduto: "roupa gola",
+                idproduto: "444",
+                precoproduto: "33,00",
+                 
+            },
+            {
+                corproduto: ["verde", "#35ff0d"],
+                nomeproduto: "Camiseta Tall",
+                urlproduto: [imagemteste, imagemteste],
+                tituloproduto: "roupa gola",
+                idproduto: "444",
+                precoproduto: "33,00",
+                 
+            },
+        ]
+    
+        SetapiTeste(API);
+        
+    }, [])
 
-    const API_TESTE = [
-        {
-            corproduto: ["vermelha", "#ff0303"],
-            nomeproduto: "Camiseta Tall",
-            urlproduto: [imagemteste, imagemteste],
-            tituloproduto: "roupa gola",
-            idproduto: "444",
-            precoproduto: "33,00",
-             
-        },
-        {
-            corproduto: ["vermelha", "#ff0303"],
-            nomeproduto: "Camiseta Tall",
-            urlproduto: [imagemteste, imagemteste],
-            tituloproduto: "roupa gola",
-            idproduto: "444",
-            precoproduto: "33,00",
-             
-        },
-        {
-            corproduto: ["vermelha", "#ff0303"],
-            nomeproduto: "Camiseta Tall",
-            urlproduto: [imagemteste, imagemteste],
-            tituloproduto: "roupa gola",
-            idproduto: "444",
-            precoproduto: "33,00",
-             
-        },
-        {
-            corproduto: ["vermelha", "#ff0303"],
-            nomeproduto: "Camiseta Tall",
-            urlproduto: [imagemteste, imagemteste],
-            tituloproduto: "roupa gola",
-            idproduto: "444",
-            precoproduto: "33,00",
-             
-        },
-        {
-            corproduto: ["vermelha", "#ff0303"],
-            nomeproduto: "Camiseta Tall",
-            urlproduto: [imagemteste, imagemteste],
-            tituloproduto: "roupa gola",
-            idproduto: "444",
-            precoproduto: "33,00",
-             
-        },
-        {
-            corproduto: ["azul", "#8400ff"],
-            nomeproduto: "Camiseta Tall",
-            urlproduto: [imagemteste, imagemteste],
-            tituloproduto: "roupa gola",
-            idproduto: "444",
-            precoproduto: "33,00",
-             
-        },
-        {
-            corproduto: ["vermelha", "#ff0303"],
-            nomeproduto: "Camiseta Tall",
-            urlproduto: [imagemteste, imagemteste],
-            tituloproduto: "roupa gola",
-            idproduto: "444",
-            precoproduto: "33,00",
-             
-        },
-        {
-            corproduto: ["vermelha", "#ff0303"],
-            nomeproduto: "Camiseta Tall",
-            urlproduto: [imagemteste, imagemteste],
-            tituloproduto: "roupa gola",
-            idproduto: "444",
-            precoproduto: "33,00",
-             
-        }
-        ,
-        {
-            corproduto: ["vermelha", "#ff0303"],
-            nomeproduto: "Camiseta Tall",
-            urlproduto: [imagemteste, imagemteste],
-            tituloproduto: "roupa gola",
-            idproduto: "444",
-            precoproduto: "33,00",
-             
-        },
-        {
-            corproduto: ["vermelha", "#ff0303"],
-            nomeproduto: "Camiseta Tall",
-            urlproduto: [imagemteste, imagemteste],
-            tituloproduto: "roupa gola",
-            idproduto: "444",
-            precoproduto: "33,00",
-             
-        },
-        {
-            corproduto: ["verde", "#35ff0d"],
-            nomeproduto: "Camiseta Tall",
-            urlproduto: [imagemteste, imagemteste],
-            tituloproduto: "roupa gola",
-            idproduto: "444",
-            precoproduto: "33,00",
-             
-        },
-    ]
-
+    
 
     useEffect(() => {
         setprodutoApi(() => {
             return API_TESTE.filter(v => v.corproduto[1].includes(filtroColor))
         });
 
-    }, [filtroColor])
+    }, [API_TESTE, filtroColor])
     
 
     return(

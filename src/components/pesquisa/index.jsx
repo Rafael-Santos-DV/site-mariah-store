@@ -8,55 +8,64 @@ import { useParams } from "react-router-dom";
 export const PesquisaProdutos = ({ search }) => {
     const [useSearch, setUseSearch] = useState("");
     const { pesquisa } = useParams();
-    
+    const [testeApi, setApi] = useState();
+
+    useEffect(() => {
+        const api = [
+
+            {
+                idproduto: "131313",
+                urlproduto: imagemteste,
+                tituloproduto: "titulo produto",
+                nomeproduto: "camisa",
+                precoproduto: "10,00"
+            },
+            {
+                idproduto: "131313",
+                urlproduto: imagemteste,
+                tituloproduto: "titulo produto",
+                nomeproduto: "blusa",
+                precoproduto: "10,00"
+            },
+            {
+                idproduto: "131313",
+                urlproduto: imagemteste,
+                tituloproduto: "titulo produto",
+                nomeproduto: "blusa",
+                precoproduto: "10,00"
+            },
+            {
+                idproduto: "131313",
+                urlproduto: imagemteste,
+                tituloproduto: "titulo produto",
+                nomeproduto: "blusa",
+                precoproduto: "10,00"
+            },
+            {
+                idproduto: "131313",
+                urlproduto: imagemteste,
+                tituloproduto: "titulo produto",
+                nomeproduto: "blusa",
+                precoproduto: "10,00"
+            }
+        ]
+
+        setApi(api);
+
+    }, []);
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
 
-    const testeApi = [
-        {
-            idproduto: "131313",
-            urlproduto: imagemteste,
-            tituloproduto: "titulo produto",
-            nomeproduto: "camisa",
-            precoproduto: "10,00"
-        },
-        {
-            idproduto: "131313",
-            urlproduto: imagemteste,
-            tituloproduto: "titulo produto",
-            nomeproduto: "blusa",
-            precoproduto: "10,00"
-        },
-        {
-            idproduto: "131313",
-            urlproduto: imagemteste,
-            tituloproduto: "titulo produto",
-            nomeproduto: "blusa",
-            precoproduto: "10,00"
-        },
-        {
-            idproduto: "131313",
-            urlproduto: imagemteste,
-            tituloproduto: "titulo produto",
-            nomeproduto: "blusa",
-            precoproduto: "10,00"
-        },
-        {
-            idproduto: "131313",
-            urlproduto: imagemteste,
-            tituloproduto: "titulo produto",
-            nomeproduto: "blusa",
-            precoproduto: "10,00"
-        }
-    ]
+    
    
     useEffect(() => {
         setUseSearch(() => {
             return testeApi.filter(v => v.nomeproduto.toLocaleLowerCase().includes(search.toLocaleLowerCase() || String(pesquisa).toLocaleLowerCase()))
         });
 
-    }, [search, pesquisa]);
+    }, [search, pesquisa, testeApi]);
 
 
     return(

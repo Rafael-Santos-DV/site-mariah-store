@@ -1,7 +1,6 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { BsTrashFill } from "react-icons/bs";
-import { useEffect } from "react/cjs/react.development";
 import imagemTeste from "../../assets/imagens-teste/imagem-teste.png";
 import { GlobalContext } from "../../context";
 

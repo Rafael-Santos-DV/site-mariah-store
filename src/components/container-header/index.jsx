@@ -4,11 +4,11 @@ import { TiMessages } from "react-icons/ti";
 import { AiOutlineClose, AiOutlineMail, AiOutlineShoppingCart, AiOutlineWhatsApp } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";
 import { GiHamburgerMenu } from "react-icons/gi"
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { GlobalContext } from "../../context";
 import { Link } from "react-router-dom";
 import { SideBarCarrinho } from "../menu-carrinho";
-import { useEffect } from "react/cjs/react.development";
+
 
 
 export const ContainerHeader = () => {

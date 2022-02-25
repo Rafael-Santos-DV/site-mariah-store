@@ -10,6 +10,7 @@ import { GlobalContext } from "../context";
 import { CompraProduto } from "../pages/compraProduto";
 import { PaginaContato } from "../pages/contato";
 import { Home } from "../pages/home";
+import Painel from "../pages/painel";
 import { RotaProdutos } from "../pages/produtos";
 
 
@@ -87,6 +88,8 @@ function App() {
               <Route path="/contato" element={<PaginaContato />} />
 
               <Route path="/search/:pesquisa" element={<PesquisaProdutos search={useFiltro} />} />
+              
+              <Route path="/painel" element={<Painel />} />
 
             </Routes>
             <Footer />

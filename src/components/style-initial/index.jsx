@@ -21,5 +21,6 @@ export const StyleGlobal = createGlobalStyle`
 
 export const ContainerRoot = styled.div`
     width: 100%;
-
+    height: 100%;
+    
 `; 
